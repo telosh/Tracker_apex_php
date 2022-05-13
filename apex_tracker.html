@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker API sample</title>
+    <style>
+        .maintag{
+            font-weight: bold;
+            font-size: 24px;
+            position: relative;
+        }
+        span{
+            position: absolute;
+            left: 0px;
+            bottom: -100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 32px;
+            font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+            background: #f4f4f4;
+            border-top: solid 2px #80c8d1;
+            border-bottom: solid 2px #80c8d1;
+        }
+        p,label {
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+
+        input {
+            margin: .4rem;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="app.php" method="get">
+        <p>使用プラットフォーム</p>
+        <select name="plt" id="set-platforms">
+            <option value="">--Please choose an option--</option>
+            <option value="origin">Origin</option>
+            <option value="PSN">PS系</option>
+            <option value="xbox">xbox</option>
+        </select>
+        <br>
+        <p>アカウントID</p>
+        <input type="text" name="name" id="usernames">
+        <br>
+        <fieldset>
+            <legend>Choose you need Status of Apex:</legend>
+            
+            <div>
+                <input type="checkbox" id="total_levels" name="total_levels"
+                       checked>
+                <label for="total_levels">Account Levels</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="total_kills" name="total_kills"
+                     checked>
+              <label for="total_kills">Total Kills</label>
+            </div>
+        
+            <div>
+              <input type="checkbox" id="total_dameges" name="total_dameges">
+              <label for="total_dameges">Total Dameges</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="head_shots" name="head_shots">
+                <label for="head_shots">Head_Shots</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="matchesPlayed" name="matchesPlayed">
+                <label for="matchesPlayed">Matches_Played</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="finishers" name="finishers">
+                <label for="finishers">Finishers</label>
+            </div>
+
+
+        </fieldset>
+        <br>
+        <input type="submit" value="送信！">
+    </form>
+    <!-- <p class='maintag'>Level<span class='leveltag'>1300</span></p> -->
+</body>
+</html>
